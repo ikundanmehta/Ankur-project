@@ -9,6 +9,12 @@ const Navbar = () => {
     margin: 5,
   };
 
+  const size2 = {
+    width: 35,
+    height: 35,
+    margin: 5,
+  };
+
   // const MySize = {
   //   width: 50,
   //   height: 50,
@@ -130,6 +136,18 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              <li>
+                <a class="nav-link" href="#">
+                  <>
+                    <Link
+                      to="/story"
+                      class="link-light fs-6 text-decoration-none badge badge-info text-wrap"
+                    >
+                      Story
+                    </Link>
+                  </>
+                </a>
+              </li>
             </ul>
             <ul class="nav justify-content-end">
               <li class="nav-item">
@@ -140,7 +158,6 @@ const Navbar = () => {
               <li class="nav-item">
                 <a class="nav-link" href="#">
                   <>
-                    {" "}
                     <Link to="/contact" class="link-secondary">
                       Contact
                     </Link>
@@ -154,14 +171,18 @@ const Navbar = () => {
 
       <nav class="navbar  sticky-top" style={s1}>
         <div class="container-fluid">
-          <a class="navbar-brand" href="#">
+          <a class="navbar-brand d-flex align-items-center" href="#">
+            <img src="./favicon2.png" alt="" style={size2} />
+            <span class="font-weight-bold fs-4 ml-2">RestroLane</span>
+          </a>
+          {/* <a class="navbar-brand" href="#">
             <img
               src="https://image.shutterstock.com/image-vector/letter-b-pulse-music-player-260nw-1581685942.jpg"
               alt=""
               style={Size}
             />
             D~MusicaLane
-          </a>
+          </a> */}
           <button
             class="navbar-toggler"
             type="button"
@@ -195,13 +216,20 @@ const Navbar = () => {
           >
             <div class="offcanvas-header">
               <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
+                <div class="d-flex align-items-center">
+                  <img src="./favicon2.png" alt="" style={size2} />
+                  <span class="font-weight-bold fs-4 ml-2">RestroLane</span>
+                </div>
+              </h5>
+
+              {/* <h5 class="offcanvas-title" id="offcanvasNavbarLabel">
                 <img
                   src="https://image.shutterstock.com/image-vector/letter-b-pulse-music-player-260nw-1581685942.jpg"
                   alt=""
                   style={Size}
                 />
                 D~MusicaLane
-              </h5>
+              </h5> */}
               <button
                 type="button"
                 class="btn-close"
